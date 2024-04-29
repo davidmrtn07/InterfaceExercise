@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace InterfaceExercise
 {
@@ -6,6 +7,26 @@ namespace InterfaceExercise
     {
         static void Main(string[] args)
         {
+
+            Car myfirstcar = new Car { Year = "1995", Make = "Honda", Model = "Accord", HasTrunk = true, Has6seats = false, CanDrive = true, DateEstablished = "1995", Logo = "Yes"};
+            SUV myfirstsuv = new SUV { Year = "2020", Make = "Ford", Model = "Explorer", HasThirdRow = true, HasFourthRow = false, CanDrive = true, DateEstablished = "2020", Logo = "Yes" };
+            Truck myfirsttruck = new Truck { Year = "2003", Make = "Chevy", Model = "Silverado", HasLongBed = true, HasBedCover = false, CanDrive = true, DateEstablished = "2003", Logo = "Yes" };
+
+
+            List<ICompany> vehicles = new List<ICompany>();
+
+            vehicles.Add(myfirstcar);
+            vehicles.Add(myfirstsuv);
+            vehicles.Add(myfirsttruck);
+
+            foreach (ICompany vehicle in vehicles)
+            {
+                Console.WriteLine($"Year: {vehicle.Year} Make: {vehicle.Make} Model: {vehicle.Model} CanDrive? {vehicle.CanDrive}");
+                Console.WriteLine();
+                vehicle.Drive();
+                Console.WriteLine();
+            }
+
             //TODO Be sure to follow BEST PRACTICES when creating classes and interfaces
 
             //Create 2 Interfaces called IVehicle & ICompany
