@@ -9,7 +9,7 @@ namespace InterfaceExercise
     interface ICompany
     {
         string Logo { get; set; }
-        DateTime DateEstablished { get; set; }
+        string DateEstablished { get; set; }
 
         string Make { get; set; }
         string Model { get; set; }

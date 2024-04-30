@@ -15,7 +15,7 @@ namespace InterfaceExercise
         public bool HasTrunk { get; set; }
         public bool Has6seats { get; set; }
         public string Logo { get; set; }
-        public DateTime DateEstablished { get; set; }
+        public string DateEstablished { get; set; }
 
         public void Drive()
         {

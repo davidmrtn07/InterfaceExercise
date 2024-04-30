@@ -15,7 +15,7 @@ namespace InterfaceExercise
         public bool HasLongBed { get; set; }
         public bool HasBedCover { get; set; }
         public string Logo { get; set; }
-        public DateTime DateEstablished { get; set; }
+        public string DateEstablished { get; set; }
 
 
 

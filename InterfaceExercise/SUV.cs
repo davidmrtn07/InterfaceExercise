@@ -15,7 +15,7 @@ namespace InterfaceExercise
         public bool HasThirdRow { get; set; }
         public bool HasFourthRow { get; set; }
         public string Logo { get; set; }
-        public DateTime DateEstablished { get; set; }
+        public string DateEstablished { get; set; }
 
 
         public void Drive()
